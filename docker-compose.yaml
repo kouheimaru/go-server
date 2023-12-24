@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  terraform:
+    container_name: go_app
+    tty: true
+    build: ./go_app
+    volumes:
+      - ./go_app:/go_app
+    ports:
+      - "80:80"
